@@ -37,6 +37,7 @@ class CanAdmin
      */
     public function handle($request, Closure $next)
     {
+        $user = Auth::guard($this->guard)->user()->getAllPermissions();
         if (Auth::guard($this->guard)->check() && Auth::guard($this->guard)->user()->can('admin')) {
             return $next($request);
         }

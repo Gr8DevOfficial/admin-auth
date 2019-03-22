@@ -8,7 +8,7 @@
 	        <div class="col-md-6 col-lg-5">
 				<div class="card">
 					<div class="card-block">
-						<auth-form
+                        <auth-form
 								:action="'{{ url('/admin/login') }}'"
 								:data="{}"
 								inline-template>

@@ -53,8 +53,12 @@ class AdminAuthServiceProvider extends ServiceProvider
             }
 
             $this->publishes([
-                __DIR__ . '/../install-stubs/resources/lang' => resource_path('lang/vendor/admin-auth'),
+                __DIR__ . '/../resources/lang' => resource_path('lang/vendor/admin-auth'),
             ], 'lang');
+
+            $this->publishes([
+                __DIR__.'/../resources/views' => resource_path('views/vendor/brackets/admin-auth')
+            ], 'views');
         }
 
         $this->app->bind(
