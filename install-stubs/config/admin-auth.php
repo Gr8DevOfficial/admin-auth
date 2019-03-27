@@ -95,4 +95,6 @@ return [
     */
 
     'use_routes' => true,
+
+    'password_validation_rules' => 'required|confirmed|min:7|string',
 ];
